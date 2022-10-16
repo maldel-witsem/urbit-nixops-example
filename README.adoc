@@ -1,0 +1,25 @@
+this is an example of a nixops host which can run an Urbit ship.
+it is partially based on https://operators.urbit.org/manual/running/hosting[this guide].
+
+it also shows example configuration of minio, whose (standard) configuration is explained https://operators.urbit.org/manual/running/minio[here].
+
+== caveat emptor
+
+this is lifted from an operational nixops derivation I use to run my ship.
+however, the extracted code in this repo is untested and incomplete!
+use it as a guide.
+
+== main steps to use this
+
+- use https://github.com/elitak/nixos-infect[nixos-infect] on your VPS to NixOS-ify it
+- download the `/etc/nixos/networking.nix` file to the repo root
+- (in `cloud-hosts.nix`) add your SSH key!
+- replace `$YOUR_SHIP` with your ship's domain
+- replace `$YOUR_EMAIL` with your email (for Let's Encrypt TLS cert)
+- edit the `/etc/nixos/minio-root-credentials` file to add credentials (see https://search.nixos.org/options?channel=22.05&show=services.minio.rootCredentialsFile&from=0&size=50&sort=relevance&type=packages&query=rootCredentialsFile[here])
+
+== notes
+
+I used a flake to manage deps, here.
+I find it tidy when managing nixops machines as part of a larger repo.
+for a small repo like this, it matters less.

@@ -17,16 +17,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1665951476,
-        "narHash": "sha256-sPCiawYzAYfHJJU9P/1DWyke/RvRbFPDFfB+upEqAcI=",
+        "lastModified": 1665856284,
+        "narHash": "sha256-FQusb2DuFo8UF0jhUSPFhDKc40jRbHcdyyw4anN20WA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "16b9f75bf40ba9f09d75b0c950a0ff4f8b2e40b1",
+        "rev": "be44bf672c61a284f759898d1e59077b00655c4c",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "master",
+        "ref": "nixos-22.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -34,7 +34,24 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "urbit": "urbit"
+      }
+    },
+    "urbit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665521583,
+        "narHash": "sha256-jQLfjdsLEuCJOTxlgutjK2oqeef3tiPjlbXIhn0ZIKQ=",
+        "owner": "urbit",
+        "repo": "urbit",
+        "rev": "361384d15c6a22ffc9424deb4f23848c36123906",
+        "type": "github"
+      },
+      "original": {
+        "owner": "urbit",
+        "repo": "urbit",
+        "type": "github"
       }
     }
   },
